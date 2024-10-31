@@ -1,0 +1,381 @@
+/*!
+ * Tailwind Styles
+ *
+ * Tailwind styles get applied and enqueued on both the front of your
+ * site and in the editor.
+ *
+ * All styles get prepended with a custom namespace so Tailwind styles
+ * don't bleed into the rest of the site.
+ *
+ * i.e. - If your plugin slug is 'test-test' then all Tailwind styles
+ * will be prepended with [class*="test-test"].
+ *
+ * You can edit the prepended selector in the root postcss.config.js file
+*/
+
+/* @tailwind base; */
+
+.tw-container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .tw-container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tw-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tw-container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .tw-container {
+    max-width: 1280px;
+  }
+}
+
+[class*="pattern"].ml-0 li {
+  margin-left: 0 !important;
+}
+
+[class*="pattern"].text-black.text-opacity-50 li {
+  --text-opacity: 1 !important;
+  color: #000000 !important;
+  color: rgba(0, 0, 0, var(--text-opacity)) !important;
+  --text-opacity: 0.5 !important;
+}
+
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.tw-rounded-xl {
+  border-radius: 24px !important;
+}
+
+.tw-shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
+.tw-shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+.tw-h-auto {
+  height: auto !important;
+}
+
+.tw-h-full {
+  height: 100% !important;
+}
+
+.tw-list-none {
+  list-style-type: none !important;
+}
+
+.tw-my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.tw-my-3 {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+.tw-mt-0 {
+  margin-top: 0 !important;
+}
+
+.tw-mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.tw-ml-0 {
+  margin-left: 0 !important;
+}
+
+.tw-mb-2 {
+  margin-bottom: 12px !important;
+}
+
+.tw-max-w-1\/2 {
+  max-width: 50% !important;
+}
+
+.tw-p-4 {
+  padding: 24px !important;
+}
+
+.tw-p-8 {
+  padding: 32px !important;
+}
+
+.tw-py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.tw-px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.tw-py-10 {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+.tw-px-10 {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.tw-pt-0 {
+  padding-top: 0 !important;
+}
+
+.tw-pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.tw-pt-10 {
+  padding-top: 40px !important;
+}
+
+.tw-text-right {
+  text-align: right !important;
+}
+
+.tw-text-black {
+  --text-opacity: 1 !important;
+  color: #000000 !important;
+  color: rgba(0, 0, 0, var(--text-opacity)) !important;
+}
+
+.tw-text-opacity-50 {
+  --text-opacity: 0.5 !important;
+}
+
+@media (min-width: 640px) {
+  .sm\:tw-container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .sm\:tw-container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .sm\:tw-container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .sm\:tw-container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .sm\:tw-container {
+      max-width: 1280px;
+    }
+  }
+
+  .sm\:tw-p-10 {
+    padding: 40px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:tw-container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .md\:tw-container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .md\:tw-container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .md\:tw-container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .md\:tw-container {
+      max-width: 1280px;
+    }
+  }
+
+  .md\:tw-rounded-r-none {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  .md\:tw-rounded-l-none {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  .md\:tw-mb-10 {
+    margin-bottom: 40px !important;
+  }
+
+  .md\:tw-p-16 {
+    padding: 64px !important;
+  }
+
+  .md\:tw-px-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .md\:tw-py-16 {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:tw-container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .lg\:tw-container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .lg\:tw-container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:tw-container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .lg\:tw-container {
+      max-width: 1280px;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:tw-container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .xl\:tw-container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .xl\:tw-container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .xl\:tw-container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .xl\:tw-container {
+      max-width: 1280px;
+    }
+  }
+}
